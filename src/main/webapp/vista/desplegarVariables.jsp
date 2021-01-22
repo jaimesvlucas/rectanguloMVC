@@ -4,7 +4,6 @@
     Author     : User
 --%>
 
-<%@page import="modelo.Rectangulo"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,8 +14,9 @@
     <body>
         <h1>Desplegar variables!</h1>
         Mensaje: <%=request.getAttribute("mensaje")%><br>
-        <% Rectangulo miRectangulo = (Rectangulo) request.getAttribute("mirectangulo"); %>
-        Rectángulo con base  <%= miRectangulo.getBase()%> y altura  <%= miRectangulo.getAltura()%><br>
-        Área: <%= miRectangulo.getArea()%>
+        <% request.getAttribute("mirectangulo"); %>
+        Base  ${mirectangulo.base};
+        Altura  ${mirectangulo.altura};
+        Área: ${mirectangulo.area};
     </body>
 </html>
